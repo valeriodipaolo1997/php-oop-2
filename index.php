@@ -21,10 +21,13 @@ define('DS', DIRECTORY_SEPARATOR);
 require_once ROOT . DS . 'models' . DS . 'categories.php';
 require_once ROOT . DS . 'models' . DS . 'products.php';
 
+/*
 var_dump($commerce);
 
 var_dump($dog_categories);
 var_dump($horse_categories);
+*/
+
 
 ?>
 
@@ -38,7 +41,12 @@ var_dump($horse_categories);
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
 </head>
 
-<body>
+<body class="bg-secondary">
+
+<header>
+
+<h1 class="text-center fw-bold text-danger py-4">PETS SHOP</h1>
+</header>
 
 <main class="pt-5">
     <section id="products">
@@ -51,7 +59,7 @@ var_dump($horse_categories);
 
                         <div class="card">
 
-                            <img width="250" src="<?= $product->image ?>" alt="">
+                            <img width="250" src="./models/img/pets.jpg" alt="">
 
                             <div class="card-body">
 

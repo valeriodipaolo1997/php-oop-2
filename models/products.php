@@ -19,9 +19,9 @@ class Products
     function getIcon()
     {
         if (strtolower($this->categories->animal) == 'cane') {
-            return 'icona cane';
+            return '<img width="40" src="./models/img/cane.jpg" alt="Icona di un cane">';
         } elseif (strtolower($this->categories->animal) == 'gatto') {
-            return 'icona gatto';
+            return '<img width="40" src="./models/img/cats.jpg" alt="Icona di un Gatto">';
         } {
         }
     }
