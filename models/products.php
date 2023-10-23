@@ -7,13 +7,15 @@ class Products
     public $categories;
     public $type;
     public $image;
+    public $color;
 
-    function __construct($_name, $_price, Categories $Categories, $_type)
+    function __construct($_name, $_price, Categories $Categories, $_type, $_color)
     {
         $this->name = $_name;
         $this->price = $_price;
         $this->categories = $Categories;
         $this->type = $_type;
+        $this->color = $_color;
     }
 
     function getIcon()
@@ -30,12 +32,13 @@ class Products
 
 
 $products = [
-    new Products('Croccantini', 9.99, $dog_categories, 'Cibo'),
-    new Products('Carne', 29.90, $dog_categories, 'Cibo'),
-    new Products('Cuccia', 100.99, $dog_categories, 'Altro'),
-    new Products('Lettiera', 29.90, $cat_categories, 'Gioco'),
-    new Products('Spazzola', 4.99, $dog_categories, 'Altro'),
-    new Products('Pesce', 9.99, $cat_categories, 'Cibo'),
+    new Products('Croccantini', 9.99, $dog_categories, 'Cibo', 'Nero'),
+    new Products('Carne', 29.90, $dog_categories, 'Cibo', 'Nero'),
+    new Products('Cuccia', 100.99, $dog_categories, 'Altro', 'Nero'),
+    new Products('Lettiera', 29.90, $cat_categories, 'Gioco', 'Nero'),
+    new Products('Spazzola', 4.99, $dog_categories, 'Altro', 'Nero'),
+    new Products('Pesce', 9.99, $cat_categories, 'Cibo', 'Nero'),
+    
  
 ];
 
