@@ -3,6 +3,7 @@
 class Categories
 {
     use Animal;
+    
     public $animal;
 
     function __construct($_animal)

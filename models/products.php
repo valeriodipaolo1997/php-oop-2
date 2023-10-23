@@ -9,8 +9,13 @@ class Products
     public $image;
     public $color;
 
-    function __construct($_name, $_price, Categories $Categories, $_type, $_color)
+    function __construct($_name, $_price, $Categories, $_type, $_color)
     {
+        /*
+        if (empty($name)) {
+            throw new InvalidArgumentException("Il nome del prodotto non può essere una stringa vuota.");
+        }
+        */
         $this->name = $_name;
         $this->price = $_price;
         $this->categories = $Categories;
@@ -29,7 +34,15 @@ class Products
     }
 };
 
-
+/*
+try {
+    $product = new Products( '', 19.99, 'categoria', 'Descrizione', 'colore');
+    
+} catch (InvalidArgumentException $e) {
+    echo "Errore: " . $e->getMessage();
+    
+}
+*/
 
 $products = [
     new Products('Croccantini', 9.99, $dog_categories, 'Cibo', 'Nero'),

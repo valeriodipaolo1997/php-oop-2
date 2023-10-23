@@ -7,7 +7,7 @@ Bonus (non opzionale):
 organizzate il progetto come visto stamattina a lezione usando varie sottocartelle per inserire classi, layout e dati. -->
 
 <?php
-$debug = true; // cambiate in true e false in base se volete o meno vedere gli errori
+$debug = false; // cambiate in true e false in base se volete o meno vedere gli errori
 if ($debug == true) {
     ini_set('display_errors', 1); // imposta il file php.ini a mostrare gli errori
     error_reporting(E_ALL); // imposta il livello di errori da mostrare E_ALL tutti
@@ -68,7 +68,7 @@ var_dump($horse_categories);
 
                                 <div>Per: <?= $product->getIcon() ?></div>
                                 <div><strong>Nome:</strong> <?= $product->name ?></div>
-                                <div><strong>Prezzo</strong> <?= $product->price ?></div>
+                                <div><strong>Prezzo</strong> <?= $product->price ?> &euro;</div>
                                 <div><strong>Animale:</strong> <?= $product->categories->animal ?></div>
                                 <div><strong>Tipo:</strong> <?= $product->type ?></div>
                                 <div><strong>Colore:</strong> <?= $product->color ?> </div>
